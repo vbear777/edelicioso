@@ -4,6 +4,7 @@ import { FlatList, Image, Pressable, Text, TouchableOpacity, View } from "react-
 import { images, offers } from "@/constants";
 import { Fragment } from "react";
 import cn from "clsx";
+import CartButton from "@/components/CartButton";
 
 export default function Index() {
   return (
@@ -45,7 +46,7 @@ export default function Index() {
         }}
         contentContainerClassName="pb-28 px-5"
         ListHeaderComponent={() => (
-          <View className="flex items-center justify-between flex-row w-full my-5 px-5">
+          <View className="flex items-center justify-between flex-row w-full my-5">
             <View className="flex items-start justify-center">
                 <Text className="text-lg font-great text-golden">Deliver To</Text>
                 <TouchableOpacity className="flex items-center justify-center flex-row gap-x-1 mt-0.5">
@@ -54,7 +55,7 @@ export default function Index() {
                 </TouchableOpacity>
             </View>
 
-            <Text>Cart</Text>
+            <CartButton />
           </View>
         )} 
       />
