@@ -1,6 +1,6 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import "./global.css"
-import { FlatList, Image, Pressable, Text, View } from "react-native";
+import { FlatList, Image, Pressable, Text, TouchableOpacity, View } from "react-native";
 import { images, offers } from "@/constants";
 import { Fragment } from "react";
 import cn from "clsx";
@@ -8,6 +8,17 @@ import cn from "clsx";
 export default function Index() {
   return (
     <SafeAreaView className="flex-1 bg-white">
+      <View className="flex items-center justify-between flex-row w-full my-5 px-5">
+        <View className="flex items-start justify-center">
+            <Text className="text-lg font-great text-golden">Deliver To</Text>
+            <TouchableOpacity className="flex items-center justify-center flex-row gap-x-1 mt-0.5">
+              <Text className="text-base font-quicksand-bold text-midnight">Indonesia</Text>
+              <Image source={images.arrowDown} className="size-3" resizeMode="contain" />
+            </TouchableOpacity>
+        </View>
+
+        <Text>Cart</Text>
+      </View>
       <FlatList 
         data={offers} 
         renderItem={({ item, index }) => {
