@@ -90,7 +90,7 @@ export const offers = [
     {
         id: 4,
         title: "GELATO",
-        image: buritto,
+        image: gelato,
         color: "#EB920C",
     },
 ];
