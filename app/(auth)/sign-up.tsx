@@ -9,14 +9,14 @@ const SignIn = () => {
     const [form, setForm] = useState({ email: '', password: ''});
 
     const submit = async () => {
-        if(!form.email || !form.password) Alert.alert('Error', 'Please enter valid email address & password');
+        if(!form.email || !form.password) return Alert.alert('Error', 'Please enter valid email address & password');
 
         setIsSubmitting(true)
 
         try {
             //Call appwrite Sign in function
 
-            Alert.alert('Success', 'User signed in successfully.');
+            Alert.alert('Success', 'User signed up successfully.');
             router.replace('/');
         } catch(error: any) {
             Alert.alert('Error', error.message);
@@ -42,7 +42,7 @@ const SignIn = () => {
                 secureTextEntry={true}
             />
             <CustomButton 
-                title="Sign In"
+                title="Sign Up"
                 isLoading={isSubmitting}
                 onPress={submit}
             />
