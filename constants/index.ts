@@ -30,21 +30,21 @@ import coleslaw from "@/assets/images/coleslaw.png";
 import cucumber from "@/assets/images/cucumber.png";
 import emptyState from "@/assets/images/empty-state.png";
 import fries from "@/assets/images/fries.png";
-import loginGraphic from "@/assets/images/login-graphic.png";
 import logo from "@/assets/images/logo.png";
 import mozarellaSticks from "@/assets/images/mozarella-sticks.png";
 import mushrooms from "@/assets/images/mushrooms.png";
 import onionRings from "@/assets/images/onion-rings.png";
 import onions from "@/assets/images/onions.png";
-import pizzaOne from "@/assets/images/pizza-one.png";
 import salad from "@/assets/images/salad.png";
 import success from "@/assets/images/success.png";
 import tomatoes from "@/assets/images/tomatoes.png";
+// add new
 import pizza1 from "@/assets/images/pizza1.png";
 import artichoke from "@/assets/images/pastaArtichoke.png";
 import bolognese from "@/assets/images/spaghettiBolognese.png";
 import gelato from "@/assets/images/gelato.png";
 import loginbg from "@/assets/images/loginbg.jpg";
+import ravioli from "@/assets/images/ravioli.png";
 
 export const CATEGORIES = [
     {
@@ -53,11 +53,11 @@ export const CATEGORIES = [
     },
     {
         id: "2",
-        name: "Burger",
+        name: "Pizza",
     },
     {
         id: "3",
-        name: "Pizza",
+        name: "Pasta",
     },
     {
         id: "4",
@@ -65,7 +65,7 @@ export const CATEGORIES = [
     },
     {
         id: "5",
-        name: "Burrito",
+        name: "Gelato",
     },
 ];
 
@@ -98,19 +98,19 @@ export const offers = [
 
 export const sides = [
     {
-        name: "Fries",
-        image: fries,
-        price: 3.5,
+        name: "Ravioli",
+        image: ravioli,
+        price: 5,
     },
     {
         name: "Onion Rings",
         image: onionRings,
-        price: 4.0,
+        price: 3.5,
     },
     {
         name: "Mozarella Sticks",
         image: mozarellaSticks,
-        price: 5.0,
+        price: 4,
     },
     {
         name: "Coleslaw",
@@ -168,6 +168,7 @@ export const images = {
     bolognese,
     gelato,
     loginbg,
+    ravioli,
     avatar,
     avocado,
     bacon,
@@ -179,13 +180,11 @@ export const images = {
     cucumber,
     emptyState,
     fries,
-    loginGraphic,
     logo,
     mozarellaSticks,
     mushrooms,
     onionRings,
     onions,
-    pizzaOne,
     salad,
     success,
     tomatoes,
