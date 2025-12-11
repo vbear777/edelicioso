@@ -4,7 +4,7 @@ import { Link, router } from "expo-router";
 import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 
-const SignUp = () => {
+const SignIn = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [form, setForm] = useState({email: '', password: ''});
 
@@ -59,4 +59,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp;
+export default SignIn;
