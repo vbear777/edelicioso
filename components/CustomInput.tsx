@@ -29,7 +29,7 @@ const CustomInput = ({
                 onBlur={() => setIsFocused(false)}
                 placeholder={placeholder}
                 placeholderTextColor="#888"
-                className={cn('input', isFocused ? 'border-golden' : 'border-gray-300')}
+                className={cn('rounded-lg p-3 w-full text-base font-quicksand-semibold text-midnight-100 border-b leading-5', isFocused ? 'border-golden' : 'border-gray-300')}
             />
         </View>
     )
