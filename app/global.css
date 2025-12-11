@@ -18,6 +18,14 @@
 }
 
 @layer components {
+    .cart-deepred {
+        @apply bg-deepred;
+    }
+
+    .cart-scarlet {
+        @apply bg-scarlet;
+    }
+    
     .cart-btn {
         @apply flex items-center justify-center size-10 rounded-full bg-midnight-100;
     }
