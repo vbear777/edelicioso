@@ -11,7 +11,7 @@ export default function AuthLayout() {
         <KeyboardAvoidingView behavior={Platform.OS === 'android' ? 'padding' : 'height'}>
             <ScrollView className="bg-white h-full" keyboardShouldPersistTaps="handled">
                 <View className="w-full relative" style={{ height: Dimensions.get('screen').height / 2.25}}>
-                    <ImageBackground source={images.loginGraphic} className="size-full rounded-b-lg" resizeMode="stretch" />
+                    <ImageBackground source={images.loginbg} className="size-full rounded-b-lg" resizeMode="stretch" />
                     <Image source={images.logo} className="self-center size-20 rounded-lg opacity-95 absolute -bottom-1 z-10" />
                 </View>
                 <Slot />

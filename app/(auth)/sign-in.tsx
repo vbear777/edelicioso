@@ -4,17 +4,17 @@ import { Link, router } from "expo-router";
 import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 
-const SignIn = () => {
+const SignUp = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [form, setForm] = useState({ email: '', password: ''});
+    const [form, setForm] = useState({ name: '', email: '', password: ''});
 
     const submit = async () => {
-        if(!form.email || !form.password) Alert.alert('Error', 'Please enter valid email address & password');
+        if(!form.name || !form.email || !form.password) Alert.alert('Error', 'Please enter valid email address & password');
 
         setIsSubmitting(true)
 
         try {
-            //Call appwrite Sign in function
+            //Call appwrite Sign up function
 
             Alert.alert('Success', 'User signed in successfully.');
             router.replace('/');
@@ -27,6 +27,12 @@ const SignIn = () => {
     
     return (
         <View className="gap-10 bg-white rounded-lg p-5 mt-5">
+            <CustomInput 
+                placeholder="Enter your fullname"
+                value={form.name}
+                onChangeText={(text) => setForm((prev) => ({ ...prev, name: text }))}
+                label="Full name"
+            />
             <CustomInput 
                 placeholder="Enter your email"
                 value={form.email}
@@ -49,14 +55,14 @@ const SignIn = () => {
 
             <View className="flex justify-center mt-5 flex-row gap-2">
                 <Text className="text-lg font-quicksand text-gray">
-                    Don't have an account?
+                    Already have an account?
                 </Text>
                 <Link href="/(auth)/sign-up" className="text-lg text-golden font-quicksand-bold !important">
-                    Sign Up
+                    Sign In
                 </Link>
             </View>
         </View>
     )
 }
 
-export default SignIn;
+export default SignUp;

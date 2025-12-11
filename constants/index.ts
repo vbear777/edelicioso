@@ -44,6 +44,7 @@ import pizza1 from "@/assets/images/pizza1.png";
 import artichoke from "@/assets/images/pastaArtichoke.png";
 import bolognese from "@/assets/images/spaghettiBolognese.png";
 import gelato from "@/assets/images/gelato.png";
+import loginbg from "@/assets/images/loginbg.jpg";
 
 export const CATEGORIES = [
     {
@@ -166,6 +167,7 @@ export const images = {
     artichoke,
     bolognese,
     gelato,
+    loginbg,
     avatar,
     avocado,
     bacon,
