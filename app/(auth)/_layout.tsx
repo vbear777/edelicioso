@@ -12,7 +12,7 @@ export default function AuthLayout() {
             <ScrollView className="bg-white h-full" keyboardShouldPersistTaps="handled">
                 <View className="w-full relative" style={{ height: Dimensions.get('screen').height / 2.25}}>
                     <ImageBackground source={images.loginGraphic} className="size-full rounded-b-lg" resizeMode="stretch" />
-                    <Image source={images.logo} className="self-center size-20 rounded-lg opacity-90 absolute -bottom-1 z-10" />
+                    <Image source={images.logo} className="self-center size-20 rounded-lg opacity-95 absolute -bottom-1 z-10" />
                 </View>
                 <Slot />
             </ScrollView>
