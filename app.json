@@ -39,6 +39,14 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "han_edelicioso_food-italian",
+          "organization": "edelicioso"
+        }
       ]
     ],
     "experiments": {
