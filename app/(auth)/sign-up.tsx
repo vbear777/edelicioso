@@ -16,7 +16,7 @@ const SignUp = () => {
         setIsSubmitting(true)
 
         try {
-            //Call appwrite Sign in function
+            //Call appwrite Sign up function
             await createUser({ email, password, name });
 
             router.replace('/');
