@@ -6,7 +6,12 @@ export const appwriteConfig = {
     projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
     platform: "com.hans.edelicioso",
     databaseId: '69393ebe002ee4949eb4',
+    bucketId: '693cccbf003277abd358',
     userCollectionId: 'user',
+    categoriesCollectionId: 'categories',
+    menuCollectionId: 'menu',
+    customizationsCollectionId: 'customizations',
+    menuCustomizationCollectionId: 'menu_customizations'
 };
 
 export const client = new Client();
