@@ -6,7 +6,10 @@ import { images } from "@/constants";
 import useAuthStore from "@/store/auth.store";
 
 export default function AuthLayout() {
-    const { isAuthenticated } = useAuthStore();
+    //don't forget to remove comment after make tabs navigation
+    const { isAuthenticated } = useAuthStore();  
+
+    //const isAuthenticated = true;
 
     if (isAuthenticated) return <Redirect href="/" />
     
