@@ -17,8 +17,8 @@ const TabBarIcon = ({ focused, icon, title }: TabBarIconProps) => (
 
 export default function TabsLayout() {
     //don't forget to remove comment after make tabs navigation
-    const { isAuthenticated } = useAuthStore(); 
-    //const isAuthenticated = true;
+    //const { isAuthenticated } = useAuthStore(); 
+    const isAuthenticated = true;
 
     if(!isAuthenticated) return <Redirect href="/sign-in" />
 
