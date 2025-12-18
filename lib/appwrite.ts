@@ -1,5 +1,5 @@
 import { CreateUserParams, SignInParams } from "@/type";
-import { Account, Avatars, Client, Databases, ID, Query } from "react-native-appwrite";
+import { Account, Avatars, Client, Databases, ID, Query, Storage } from "react-native-appwrite";
 
 export const appwriteConfig = {
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!,
@@ -11,7 +11,7 @@ export const appwriteConfig = {
     categoriesCollectionId: 'categories',
     menuCollectionId: 'menu',
     customizationsCollectionId: 'customizations',
-    menuCustomizationCollectionId: 'menu_customizations'
+    menuCustomizationsCollectionId: 'menu_customizations'
 };
 
 export const client = new Client();
@@ -23,6 +23,7 @@ client
 
 export const account = new Account(client);
 export const databases = new Databases(client);
+export const storage = new Storage(client);
 const avatars = new Avatars(client);
 
 
