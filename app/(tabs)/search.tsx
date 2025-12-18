@@ -1,13 +1,38 @@
-import seed from "@/lib/seed";
-import { View, Text, Button } from "react-native";
+import useAppwrite from "@/lib/useAppwrite";
+import { View, Text, Button, FlatList } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { getCategories, getMenu } from "@/lib/appwrite";
+import { useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
 
 const Search = () => {
-    return (
-        <SafeAreaView>
-            <Text>Search</Text>
+    const { category, query } = useLocalSearchParams<{query: string; category: string}>()
 
-            <Button title="Seed" onPress={() => seed().catch((error) => console.log('Failed to seed the database.', error))} />
+    const { data, refetch, loading } = useAppwrite({
+        fn: getMenu, 
+        params: {
+            category,
+            query,
+            limit: 6,
+        }
+    });
+
+    const { data: categories } = useAppwrite({ fn: getCategories });
+
+    useEffect(() => {
+        refetch({ category, query, limit: 6})
+    }, [category, query]);
+
+    console.log("DATA LENGTH:", data?.length);
+    return (
+        <SafeAreaView className="bg-white h-full ">
+            <FlatList data={data} renderItem={({ item, index }) => {
+                return (
+                    <View className="flex-1 max-w-[48%]">
+                        <Text>Menu Card</Text>
+                    </View>
+                )                
+            }} />
         </SafeAreaView>
     )
 }
