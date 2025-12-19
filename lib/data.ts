@@ -36,7 +36,7 @@ const dummyData = {
             name: "Classic Margherita Pizza",
             description: "Classic Italian pizza with tomato sauce, mozzarella, and fresh basil",
             image_url:
-                "https://www.vecteezy.com/photo/27100477-a-pizza-margherita-placed-on-a-wooden-surface-with-empty-space-around-it-is-taken-from-the",
+                "https://ik.imagekit.io/2ryft96z2y/pizza.png",
             price: 26.99,
             rating: 4.3,
             calories: 580,
@@ -48,7 +48,7 @@ const dummyData = {
             name: "Spaghetti Alle Vongole",
             description: "Classic Italian spaghetti with fresh clams, garlic, olive oil, and parsley",
             image_url:
-                "https://www.vecteezy.com/photo/70209981-spaghetti-alle-vongole-isolated-on-white-background",
+                "https://ik.imagekit.io/2ryft96z2y/allevongole.png",
             price: 28.99,
             rating: 4.6,
             calories: 520,
@@ -65,7 +65,7 @@ const dummyData = {
             name: "Spaghetti Bolognese",
             description: "Spaghetti pasta served with rich beef bolognese sauce",
             image_url:
-                "https://www.vecteezy.com/photo/38509106-ai-generated-some-spaghetti-on-a-plate-on-a-dark-background",
+                "https://ik.imagekit.io/2ryft96z2y/bolognese.png",
             price: 22.99,
             rating: 4.4,
             calories: 520,
@@ -77,7 +77,7 @@ const dummyData = {
             name: "Pasta Artichoke",
             description: "Creamy pasta with artichoke, parmesan cheese, and herbs",
             image_url:
-                "https://www.vecteezy.com/photo/52991802-delicious-pesto-pasta-dish-with-fresh-basil",
+                "https://ik.imagekit.io/2ryft96z2y/artichoke.png",
             price: 27.5,
             rating: 4.6,
             calories: 640,
@@ -89,7 +89,7 @@ const dummyData = {
             name: "Gelato",
             description: "Smooth and creamy Italian gelato",
             image_url:
-                "https://www.vecteezy.com/photo/2094191-top-view-of-ice-cream-and-berries-in-a-box",
+                "https://ik.imagekit.io/2ryft96z2y/gelatos.png",
             price: 14.99,
             rating: 4.5,
             calories: 260,
@@ -101,7 +101,7 @@ const dummyData = {
             name: "Espresso Affogato",
             description: "Vanilla gelato topped with hot espresso shot",
             image_url:
-                "https://www.vecteezy.com/photo/66626974-affogato-coffee-dessert-italian-cafe-experience",
+                "https://ik.imagekit.io/2ryft96z2y/affogato.png",
             price: 19.99,
             rating: 4.6,
             calories: 310,
@@ -113,7 +113,7 @@ const dummyData = {
             name: "Panini",
             description: "Grilled panini sandwich and fresh vegetables",
             image_url:
-                "https://www.vecteezy.com/photo/47138339-a-sandwich-with-tomatoes-and-mozzarella-cheese",
+                "https://ik.imagekit.io/2ryft96z2y/panini.png",
             price: 32.99,
             rating: 4.8,
             calories: 710,
@@ -125,7 +125,7 @@ const dummyData = {
             name: "Risotto",
             description: "Creamy risotto cooked with mushroom and parmesan cheese",
             image_url:
-                "https://www.vecteezy.com/photo/71539208-creamy-mushroom-risotto-with-fresh-basil-garnish-ready-to-serve",
+                "https://ik.imagekit.io/2ryft96z2y/risottomush.png",
             price: 23.99,
             rating: 4.6,
             calories: 480,
