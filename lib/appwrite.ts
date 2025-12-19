@@ -1,4 +1,4 @@
-import { CreateUserParams, GetMenuParams, MenuItem, SignInParams } from "@/type";
+import { CreateUserParams, GetMenuParams, MenuItem, SignInParams, Category } from "@/type";
 import { Account, Avatars, Client, Databases, ID, Query, Storage, Models } from "react-native-appwrite";
 
 export const appwriteConfig = {
@@ -138,13 +138,17 @@ export const getMenu = async ({
 
 
 //get categories
-export const getCategories = async () => {
+export const getCategories = async (): Promise<Category[]> => {
     try {
-        const categories = await databases.listDocuments(
+        const categories = await databases.listDocuments<Category>(
             appwriteConfig.databaseId,
-            appwriteConfig.categoriesCollectionId,
-        )
-    } catch (e) {
-        throw new Error(e as string);
+            appwriteConfig.categoriesCollectionId
+        );
+
+        return categories.documents;
+    } catch (err) {
+        throw new Error(
+            err instanceof Error ? err.message : "Failed to fetch categories"
+        );
     }
-}
+};

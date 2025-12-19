@@ -7,7 +7,9 @@ import { useEffect } from "react";
 import CartButton from "@/components/CartButton";
 import cn from "clsx";
 import MenuCard from "@/components/MenuCard";
-import { GetMenuParams, MenuItem } from "@/type";
+import { GetMenuParams, MenuItem, Category } from "@/type";
+import SearchBar from "@/components/SearchBar";
+import Filter from "@/components/Filter";
 
 const Search = () => {
     const { category, query } = useLocalSearchParams<{query: string; category: string}>()
@@ -22,7 +24,10 @@ const Search = () => {
     });
 
 
-    const { data: categories } = useAppwrite({ fn: getCategories });
+    const { data: categories } = useAppwrite<Category[], {}>({
+        fn: getCategories,
+        params: {},
+    });
 
     useEffect(() => {
         refetch({ category, query, limit: 6})
@@ -57,8 +62,8 @@ const Search = () => {
                                 <CartButton />
                             </View>
                             
-                            <Text>Search Input</Text>
-                            <Text>Filter</Text>
+                            <SearchBar />
+                            <Filter categories={categories ?? []} />
                         </View>
                 )} 
                 ListEmptyComponent={() => !loading && <Text>No results</Text>}
