@@ -1,5 +1,69 @@
 import { useCallback, useEffect, useState } from "react";
 import { Alert } from "react-native";
+
+interface UseAppwriteOptions<T, P> {
+    fn: (params: P) => Promise<T>;
+    params?: P;
+    skip?: boolean;
+}
+
+interface UseAppwriteReturn<T, P> {
+    data: T | null;
+    loading: boolean;
+    error: string | null;
+    refetch: (newParams?: P) => Promise<void>;
+}
+
+const useAppwrite = <T, P>({
+    fn,
+    params,
+    skip = false,
+}: UseAppwriteOptions<T, P>): UseAppwriteReturn<T, P> => {
+    const [data, setData] = useState<T | null>(null);
+    const [loading, setLoading] = useState(!skip);
+    const [error, setError] = useState<string | null>(null);
+
+    const fetchData = useCallback(
+        async (fetchParams?: P) => {
+            if (!fetchParams) return;
+
+            setLoading(true);
+            setError(null);
+
+            try {
+                const result = await fn(fetchParams);
+                setData(result);
+            } catch (err) {
+                const message =
+                    err instanceof Error
+                        ? err.message
+                        : "Unknown error occurred";
+                setError(message);
+                Alert.alert("Error", message);
+            } finally {
+                setLoading(false);
+            }
+        },
+        [fn]
+    );
+
+    useEffect(() => {
+        if (!skip && params) {
+            fetchData(params);
+        }
+    }, [skip, params, fetchData]);
+
+    const refetch = async (newParams?: P) =>
+        await fetchData(newParams ?? params);
+
+    return { data, loading, error, refetch };
+};
+
+export default useAppwrite;
+
+/*
+import { useCallback, useEffect, useState } from "react";
+import { Alert } from "react-native";
 //keep application type safe
 interface UseAppwriteOptions<T, P extends Record<string, string | number>> {
     fn: (params: P) => Promise<T>;
@@ -55,3 +119,5 @@ const useAppwrite = <T, P extends Record<string, string | number>>({
 };
 
 export default useAppwrite;
+
+*/

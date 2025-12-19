@@ -1,5 +1,5 @@
-import { CreateUserParams, GetMenuParams, SignInParams } from "@/type";
-import { Account, Avatars, Client, Databases, ID, Query, Storage } from "react-native-appwrite";
+import { CreateUserParams, GetMenuParams, MenuItem, SignInParams } from "@/type";
+import { Account, Avatars, Client, Databases, ID, Query, Storage, Models } from "react-native-appwrite";
 
 export const appwriteConfig = {
     endpoint: process.env.EXPO_PUBLIC_APPWRITE_ENDPOINT!,
@@ -110,24 +110,32 @@ export const getCurrentUser = async () => {
 };
 
 // get menu
-export const getMenu = async ({ category, query }: GetMenuParams) => {
+export const getMenu = async ({
+    category,
+    query,
+    limit,
+}: GetMenuParams): Promise<MenuItem[]> => {
     try {
         const queries: string[] = [];
 
-        if(category) queries.push(Query.equal('categories', category));
-        if(query) queries.push(Query.search('name', query));
+        if (category) queries.push(Query.equal("categories", category));
+        if (query) queries.push(Query.search("name", query));
+        if (limit) queries.push(Query.limit(limit));
 
-        const menus = await databases.listDocuments(
+        const menus = await databases.listDocuments<MenuItem>(
             appwriteConfig.databaseId,
             appwriteConfig.menuCollectionId,
-            queries,
-        )
+            queries
+        );
 
         return menus.documents;
-    } catch (e) {
-        throw new Error(e as string);
+    } catch (err) {
+        throw new Error(
+            err instanceof Error ? err.message : "Failed to fetch menu"
+        );
     }
-}
+};
+
 
 //get categories
 export const getCategories = async () => {

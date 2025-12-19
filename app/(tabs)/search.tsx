@@ -6,18 +6,21 @@ import { useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import CartButton from "@/components/CartButton";
 import cn from "clsx";
+import MenuCard from "@/components/MenuCard";
+import { GetMenuParams, MenuItem } from "@/type";
 
 const Search = () => {
     const { category, query } = useLocalSearchParams<{query: string; category: string}>()
 
-    const { data, refetch, loading } = useAppwrite({
-        fn: getMenu, 
+    const { data, loading, refetch } = useAppwrite<MenuItem[], GetMenuParams>({
+        fn: getMenu,
         params: {
             category,
             query,
             limit: 6,
-        }
+        },
     });
+
 
     const { data: categories } = useAppwrite({ fn: getCategories });
 
@@ -33,7 +36,7 @@ const Search = () => {
                     const isFirstRightColItem = index % 2 === 0;
                     return (
                         <View className={cn("flex-1 max-w-[48%]", isFirstRightColItem ? 'mt-10' : 'mt-0')}>
-                            <Text>Menu Card</Text>
+                            <MenuCard item={item as MenuItem} />
                         </View>
                     )                
                 }}
