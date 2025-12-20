@@ -1,12 +1,13 @@
 import { useFonts } from 'expo-font';
-import { Stack } from "expo-router";
+import { Stack, Redirect } from "expo-router";
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import './global.css';
 import * as Sentry from '@sentry/react-native';
-import useAuthStore from '@/store/auth.store';
+import useAuthStore from '../store/auth.store';
 
 Sentry.init({
+  
   dsn: 'https://c38d2f781e1e945ef3f2fa04492df92b@o4510519468883968.ingest.us.sentry.io/4510519507288064',
 
   // Adds more context data to events (IP address, cookies, user, etc.)
@@ -26,7 +27,8 @@ SplashScreen.preventAutoHideAsync();
 
 
 export default Sentry.wrap(function RootLayout() {
-  const { isLoading, fetchAuthenticatedUser } = useAuthStore();
+  
+  const { isAuthenticated, isLoading, fetchAuthenticatedUser } = useAuthStore();
 
   const [fontsLoaded, error] = useFonts({
     "Quicksand-Bold": require('../assets/fonts/Quicksand-Bold.ttf'),
@@ -54,6 +56,10 @@ export default Sentry.wrap(function RootLayout() {
 
   if (!fontsLoaded || isLoading) {
     return null;
+  }
+
+  if (!isAuthenticated) {
+    return <Redirect href="/(auth)/sign-in" />;
   }
 
   return <Stack screenOptions={{ headerShown: false }} />;
