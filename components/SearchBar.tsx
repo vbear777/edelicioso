@@ -25,7 +25,8 @@ const SearchBar = () => {
                 placeholder="Type here to search for pizza, pasta..."
                 value={query}
                 onChangeText={handleSearch}
-                placeholderTextColor="#a0a0a0" 
+                placeholderTextColor="#a0a0a0"
+                returnKeyType="search"
             />
 
             <TouchableOpacity className="pr-5 " onPress={() => console.log('Search pressed')}>
