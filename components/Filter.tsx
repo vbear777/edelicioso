@@ -1,5 +1,5 @@
 import { Category } from "@/type";
-import { FlatList, Text, TouchableOpacity } from "react-native";
+import { FlatList, Platform, Text, TouchableOpacity } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useState } from "react";
 import cn from "clsx";
@@ -36,6 +36,7 @@ const Filter = ({ categories }: { categories?: Category[] }) => {
             contentContainerStyle={{ paddingHorizontal: 16, gap: 12 }}
             renderItem={({ item }) => (
                 <TouchableOpacity
+                    key={item.$id}
                     onPress={() => handlePress(item.$id)}
                     className={cn(
                         "px-7 py-2 rounded-full",
