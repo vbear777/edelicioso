@@ -9,7 +9,7 @@ const SearchBar = () => {
     const [query, setQuery] = useState(params.query);
 
     const debouncedSearch = useDebouncedCallback(
-        (text: string) => router.setParams({ query, text }),
+        (text: string) => router.setParams({ query: text }),
         500
     )
 
