@@ -23,10 +23,12 @@
 #### Italian food concept application, the app that was made with curiosity and taught me a lot of things. Although Italian food is out of scope for me, I'm happy to do a little research about it, and there you go, getting more confident and excited for the new coming projects.
 
 ## 🛠 Tech Stack
-+ React
-+ Javascript
-+ Tailwind CSS
-+ Vite
++ React Native
++ Typescript
++ Tailwind CSS 3.4.17
++ Expo Go
++ Sentry
++ Appwrite
 
 ## 🌟 Feature
 + Customizations Menu
