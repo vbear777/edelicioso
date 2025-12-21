@@ -1,12 +1,11 @@
 
 <div align="center">
-  <br />
     <a href="https://www.instagram.com/reel/DSgGTWEE8b1/?igsh=dXp1eGlxOHl6aWs5" target="_blank">
-      <img src="./documentations/halamanUtama.jpg" alt="Home">
-      <img src="./documentations/menuFilterSearch.jpg" alt="Menu">
-      <img src="./documentations/cartItem.jpg" alt="Cart">
+      <img src="./documentations/halamanUtama.jpg" alt="Home" width="200">
+      <img src="./documentations/menuFilterSearch.jpg" alt="Menu" width="200">
+      <img src="./documentations/cartItem.jpg" alt="Cart" width="200">
     </a>
-  <br />
+</div>
 
    <div align="center">
       <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="React Native" />
@@ -16,6 +15,7 @@
       <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=F02E65" alt="Appwrite" />
       <img src="https://img.shields.io/badge/Appwrite-F02E65?style=for-the-badge&logo=Appwrite&logoColor=black" alt="Expo" />
   </div>
+
 
 # 🎨 edelicioso | Mobile Application
 
