@@ -1,3 +1,54 @@
+
+<div align="center">
+  <br />
+    <a href="https://www.instagram.com/reel/DSgGTWEE8b1/?igsh=dXp1eGlxOHl6aWs5" target="_blank">
+      <img src="./documentations/halamanUtama.jpg" alt="Home">
+      <img src="./documentations/menuFilterSearch.jpg" alt="Menu">
+      <img src="./documentations/cartItem.jpg" alt="Cart">
+    </a>
+  <br />
+
+   <div align="center">
+      <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="React Native" />
+      <img src="https://img.shields.io/badge/-Tailwind-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="Tailwind" />
+      <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="TypeScript" />
+      <img src="https://img.shields.io/badge/Sentry-black?style=for-the-badge&logo=Sentry&logoColor=#362D59" alt="Sentry" />
+      <img src="https://img.shields.io/badge/-Appwrite-black?style=for-the-badge&logoColor=white&logo=appwrite&color=F02E65" alt="Appwrite" />
+      <img src="https://img.shields.io/badge/Appwrite-F02E65?style=for-the-badge&logo=Appwrite&logoColor=black" alt="Expo" />
+  </div>
+
+# 🎨 edelicioso | Mobile Application
+
+## 💡 Introduction
+#### Italian food concept application, the app that was made with curiosity and taught me a lot of things. Although Italian food is out of scope for me, I'm happy to do a little research about it, and there you go, getting more confident and excited for the new coming projects.
+
+## 🛠 Tech Stack
++ React
++ Javascript
++ Tailwind CSS
++ Vite
+
+## 🌟 Feature
++ Customizations Menu
++ Filter Menu
++ Search Menu
++ Cart Menu
++ Real Time Price Calculation
++ Add and remove menu
++ Authentication user
+
+
+## 📧 Email: 
+[hanifwalian@gmail.com](mailto:hanifwalian@gmail.com)
+
+
+
+
+
+
+
+
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
